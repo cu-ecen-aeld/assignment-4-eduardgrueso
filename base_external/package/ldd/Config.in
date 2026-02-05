@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LDD
+    bool "ldd kernel modules"
+    help
+      Builds misc-modules and scull from assignment-7 repository.
