@@ -11,6 +11,8 @@ case "$1" in
         echo "load hello"
         modprobe hello
         echo "modprobe finished"
+        echo "load aesdchar"
+		aesdchar_load
         ;;
     stop)
         echo "Removing user modules"
@@ -26,6 +28,8 @@ case "$1" in
         #modprobe -r hello
         rmmod hello
         echo "hello removed"
+        echo "remove aesdchar"
+		aesdchar_unload
         ;;
     *)
         echo "Usage: $0 {start|stop}"
